@@ -1,7 +1,7 @@
 import axios from "axios";
 
-export const cadastrarUsuario = (email, nome) => {
-    axios.post("https://fsdbfhds", {
+export const cadastrarUsuario = async (email, nome) => {
+    await axios.post("http://localhost:8080/email", {
         email: email,
         nome: nome
     }).then((res) => {
