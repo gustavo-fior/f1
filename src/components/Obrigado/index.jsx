@@ -5,8 +5,9 @@ import React from "react";
 const Obrigado = () => {
   return (
     <>
-      <Typography variant="h3">Obrigado! 😁</Typography>
-      <Typography sx={{ marginTop: 2 }}>
+      <Typography variant="h3">😁</Typography>
+      <Typography variant="h3">Obrigado!</Typography>
+      <Typography variant="h5" sx={{ marginTop: 2 }}>
         Nos siga no <strong>Instagram</strong> para ficar por dentro das
         novidades...
       </Typography>
