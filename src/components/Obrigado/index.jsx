@@ -20,11 +20,11 @@ const Obrigado = () => {
       >
         <InstagramIcon fontSize="large" />
         <Link
-          href="https://instagram.com/exemplo"
+          href="https://instagram.com/f1basic"
           underline="hover"
           color="#018076"
         >
-          <Typography variant="h5">@exemplo</Typography>
+          <Typography variant="h5">@f1basic</Typography>
         </Link>
       </Stack>
     </>
