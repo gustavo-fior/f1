@@ -10,11 +10,16 @@ const BotaoVerde = styled(Button)`
   width: 150px;
 `;
 
-const WrapperFormOnMobile = styled.div`
+const WrapperContentOnMobile = styled.div`
   @media only screen and (max-width: 600px) {
     margin-top: 15%;
     height: 100vh;
     width: 100vw;
+  }
+`;
+const WrapperFormOnMobile = styled.div`
+  @media only screen and (max-width: 600px) {
+    margin-left: 26%;
   }
 `;
 
@@ -23,7 +28,7 @@ const Formulario = ({ setCadastrou }) => {
   const [email, setEmail] = useState("");
 
   return (
-    <WrapperFormOnMobile>
+    <WrapperContentOnMobile>
       <Typography variant="h3">
         Cadastre-se para ficar sabendo quando os produtos chegarem!
       </Typography>
@@ -35,33 +40,35 @@ const Formulario = ({ setCadastrou }) => {
           });
         }}
       >
-        <Box display="flex" justifyContent="center">
-          <Grid sx={{ width: 700, marginTop: 3 }} container spacing={2}>
-            <Grid item md={8}>
-              <TextField
-                onChange={(event) => {
-                  setEmail(event.target.value);
-                }}
-                fullWidth
-                placeholder="E-mail *"
-                variant="standard"
-                type="email"
-                required
-              />
+        <WrapperFormOnMobile>
+          <Box display="flex" justifyContent="center">
+            <Grid sx={{ width: 700, marginTop: 3 }} container spacing={2}>
+              <Grid item md={8}>
+                <TextField
+                  onChange={(event) => {
+                    setEmail(event.target.value);
+                  }}
+                  fullWidth
+                  placeholder="E-mail *"
+                  variant="standard"
+                  type="email"
+                  required
+                />
+              </Grid>
+              <Grid item md={4}>
+                <TextField
+                  onChange={(event) => {
+                    setNome(event.target.value);
+                  }}
+                  fullWidth
+                  placeholder="Nome (opcional)"
+                  variant="standard"
+                  type="nome"
+                />
+              </Grid>
             </Grid>
-            <Grid item md={4}>
-              <TextField
-                onChange={(event) => {
-                  setNome(event.target.value);
-                }}
-                fullWidth
-                placeholder="Nome (opcional)"
-                variant="standard"
-                type="nome"
-              />
-            </Grid>
-          </Grid>
-        </Box>
+          </Box>
+        </WrapperFormOnMobile>
         <BotaoVerde variant="contained" type="submit">
           Cadastrar
         </BotaoVerde>
@@ -70,7 +77,7 @@ const Formulario = ({ setCadastrou }) => {
           tranquilo(a) :)
         </Typography>
       </form>
-    </WrapperFormOnMobile>
+    </WrapperContentOnMobile>
   );
 };
 
